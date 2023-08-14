@@ -91,6 +91,7 @@ ul li:hover {
 
 .time {
   font-size: 12px;
+  width: max-content;
   color: rgb(155, 152, 152);
 }
 
@@ -99,10 +100,6 @@ ul li:hover {
   margin-top: -5px;
   mix-blend-mode: darken;
 }
-
-/* .icon img:hover {
-  width: 27px;
-} */
 
 .title {
   color: rgb(59, 55, 55);
@@ -117,11 +114,6 @@ ul li:hover {
   margin-top: -3px;
   cursor: pointer;
 }
-
-/* .title,
-.t1 :hover {
-  font-size: 13px;
-} */
 
 .profilediv {
   display: flex;
@@ -197,6 +189,10 @@ ul li:hover {
     font-size: 13px;
   }
 
+  .time {
+    white-space: nowrap;
+  }
+
   .head1 {
     align-items: flex-start;
     margin-top: 0;
@@ -214,7 +210,7 @@ ul li:hover {
     width: 1px;
     height: 45px;
     background-color: #ccc;
-    margin-left: -11px;
+    margin-left: -19px;
     border-radius: 1px;
   }
 }
