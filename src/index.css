@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -80,6 +84,10 @@ ul {
   margin: 0;
 }
 
+ul li:hover {
+  font-size: 18px;
+}
+
 .time {
   font-size: 12px;
   color: rgb(155, 152, 152);
@@ -91,17 +99,28 @@ ul {
   mix-blend-mode: darken;
 }
 
+/* .icon img:hover {
+  width: 27px;
+} */
+
 .title {
   color: rgb(59, 55, 55);
   font-weight: 500;
   margin-top: -3px;
+  cursor: pointer;
 }
 
 .t1 {
   color: rgb(92, 176, 224);
   font-weight: 500;
   margin-top: -3px;
+  cursor: pointer;
 }
+
+/* .title,
+.t1 :hover {
+  font-size: 13px;
+} */
 
 .profilediv {
   display: flex;
@@ -111,6 +130,7 @@ ul {
 
 .profilediv img {
   width: 25px;
+  margin-left: 10px;
   mix-blend-mode: darken;
 }
 
@@ -118,6 +138,7 @@ ul {
   font-size: 13px;
   margin-top: 5px;
   color: rgb(155, 152, 152);
+  cursor: auto;
 }
 
 .horizontal-line {
@@ -147,7 +168,9 @@ ul {
 @media (max-width: 768px) {
 
   .body {
-    color: #fff;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
   }
 
   .container {
@@ -182,9 +205,9 @@ ul {
 
   .vertical-line-pro-diff {
     width: 1px;
-    height: 30px;
+    height: 45px;
     background-color: #ccc;
-    margin-left: -17px;
+    margin-left: -11px;
     border-radius: 1px;
   }
 }

@@ -134,7 +134,7 @@ const D1 = () => {
                         </div>
                     </li>
                 </ul>
-                <div className='vertical-line' />
+                {/* <div className='vertical-line' /> */}
             </div>
         </div>
     )
