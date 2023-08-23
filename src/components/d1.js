@@ -1,29 +1,22 @@
 import React from 'react';
 import '../index.css';
-import Img30 from '../assets/30icon.png';
-import newTask from '../assets/newtsk.png';
-import Profie from '../assets/profile1.png';
-import Feedback from '../assets/feedback.png';
-import Task from '../assets/complete.png';
-import Update from '../assets/update.png';
-import Follow from '../assets/follow.png';
 
-const D1 = () => {
+const D1 = ({ day, month, imgSrc, tasks }) => {
     return (
         <div className='divD1'>
             <div className='heading'>
                 <div className='head1'>
-                    <h4>WED</h4>
-                    <p>Jul</p>
+                    <h4>{day}</h4>
+                    <p>{month}</p>
                 </div>
                 <div className='imgDiv'>
-                    <img src={Img30} alt="30" />
+                    <img src={imgSrc} alt="30" />
                 </div>
             </div>
             <div className='vertical-line' />
             <div className='lists'>
                 <ul>
-                    <li>
+                    {/* <li>
                         <div className='lid1'>
                             <div className='content'>
                                 <div className='time'>11:30 AM</div>
@@ -132,7 +125,27 @@ const D1 = () => {
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> */}
+                    {tasks.map((task, index) => (
+                        <li key={index}>
+                        <div className='lid1'>
+                            <div className='content'>
+                            <div className='time'>{task.time}</div>
+                            <div className='icon'><img src={task.icon} alt={task.title} /></div>
+                            <div className={`title ${index === 0 && day === 'WED' ? 'blue-title' : 'black-title'}`}>
+                                <div className='t1'>{task.title}</div>
+                                <div className='profilediv'>
+                                <div className='vertical-line-pro' />
+                                <div>
+                                    <img src={task.profile} alt='profile' />
+                                </div>
+                                <div className='name'>{task.name}</div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </li>
+                    ))}
                 </ul>
                 {/* <div className='vertical-line' /> */}
             </div>
